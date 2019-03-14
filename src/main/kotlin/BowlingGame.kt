@@ -6,12 +6,16 @@ class BowlingGame {
             var score = 0
             var rollIndex = 0
             for (i in 0..9) {
-                if (isSpare(rollIndex)) {
+                if (rolls[rollIndex] == 10) {
+                    score += rolls[rollIndex] + rolls[rollIndex + 1] + rolls[rollIndex + 2]
+                    rollIndex += 1
+                } else if (isSpare(rollIndex)) {
                     score += getSpareScore(rollIndex)
+                    rollIndex += 2
                 } else {
                     score += getStandardScore(rollIndex)
+                    rollIndex += 2
                 }
-                rollIndex += 2
             }
             return score
         }
