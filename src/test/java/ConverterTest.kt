@@ -28,4 +28,12 @@ class ConverterTest {
         val rolls2 = arrayOf(9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0)
         assertEquals(rolls, Arrays.asList(*rolls2))
     }
+
+    //Test 3:  test to convert scoring strings with / used to signify a spare score
+    @Test
+    fun testConverts() {
+        val rolls = converter.convert("5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5")
+        val rolls2 = arrayOf(5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5)
+        assertEquals(rolls, Arrays.asList(*rolls2))
+    }
 }
