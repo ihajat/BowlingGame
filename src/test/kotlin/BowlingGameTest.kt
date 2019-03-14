@@ -1,6 +1,6 @@
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
-import org.junit.jupiter.api.Assertions
 
 internal class BowlingGameTest {
 
@@ -14,6 +14,6 @@ internal class BowlingGameTest {
     //Test1: Write test to check that an empty/default game returns zero score
     @Test
     fun testEmptyGame() {
-        Assertions.assertEquals(0, game.score)
+        assertEquals(0, game.score)
     }
 }
