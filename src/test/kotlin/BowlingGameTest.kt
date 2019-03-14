@@ -16,4 +16,12 @@ internal class BowlingGameTest {
     fun testEmptyGame() {
         assertEquals(0, game.score)
     }
+
+    //Test2: Write test to check a gutter game returns zero
+    @Test
+    fun testZeros() {
+        val rolls = intArrayOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        game.setRolls(rolls)
+        assertEquals(0, game.score)
+    }
 }
