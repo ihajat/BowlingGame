@@ -27,6 +27,6 @@ More info on the rules at: How to Score for Bowling
 
 1. I have used TDD to drive the code functionality
 2. I have kept it simple
-3. I have used digits for input rather than symbols, though, since it's preferential choice. If it is mandatory, then, I would include a parser to convert a string of symbols , representing a game, to digits.
+3. I have used digits for input rather than symbols, but also added a converter that can be used , as input that converts the dashes/Xs//s to an array that can be used , as input, to the main Bowling game.
 4. Language of choice is Kotlin.
 
