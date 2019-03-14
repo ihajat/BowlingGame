@@ -32,4 +32,12 @@ internal class BowlingGameTest {
         game.setRolls(rolls)
         assertEquals(20, game.score)
     }
+
+    //Test4: Write test to check a spare game returns 12
+    @Test
+    fun testSpare() {
+        val rolls = intArrayOf(5, 5, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+        game.setRolls(rolls)
+        assertEquals(12, game.score)
+    }
 }
