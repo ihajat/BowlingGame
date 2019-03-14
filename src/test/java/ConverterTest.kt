@@ -21,7 +21,7 @@ class ConverterTest {
         assertEquals(rolls, Arrays.asList(*rolls2))
     }
 
-    //Test 2:  test to convert standard scoring strings to array used for the Bowling Game
+    //Test 2:  test to convert standard scoring strings with dashes used to signify a zero score
     @Test
     fun testStandardScoringWorksWithDashesForZeroScore() {
         val rolls = converter.convert("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-")

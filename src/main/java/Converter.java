@@ -9,7 +9,8 @@ public class Converter {
         for (String frame : frames) {
             String[] balls = frame.split("");
             for (String ball : balls) {
-                rolls.add(Integer.valueOf(ball));
+                if (ball.matches("-")) rolls.add(0);
+                else rolls.add(Integer.valueOf(ball));
             }
         }
         return rolls;
