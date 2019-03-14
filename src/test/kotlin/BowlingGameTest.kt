@@ -24,4 +24,12 @@ internal class BowlingGameTest {
         game.setRolls(rolls)
         assertEquals(0, game.score)
     }
+
+    //Test3: Write test to check a standard score without any spares/strikes game returns 20
+    @Test
+    fun testStandardScores() {
+        val rolls = intArrayOf(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+        game.setRolls(rolls)
+        assertEquals(20, game.score)
+    }
 }
