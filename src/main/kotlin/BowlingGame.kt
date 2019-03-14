@@ -6,11 +6,9 @@ class BowlingGame {
             var score = 0
             var rollIndex = 0
             for (i in 0..9) {
-                // if it is a spare
-                if (getStandardScore(i) == 10) {
-                    score += rolls[i] + rolls[i + 1] + rolls[i + 2]
+                if (isSpare(rollIndex)) {
+                    score += getSpareScore(rollIndex)
                 } else {
-                    // standard score
                     score += getStandardScore(rollIndex)
                 }
                 rollIndex += 2
@@ -22,7 +20,15 @@ class BowlingGame {
         this.rolls = rolls
     }
 
-    private fun getStandardScore(i: Int): Int {
-        return rolls[i] + rolls[i + 1]
+    private fun getStandardScore(rollIndex: Int): Int {
+        return rolls[rollIndex] + rolls[rollIndex + 1]
+    }
+
+    private fun isSpare(rollIndex: Int): Boolean {
+        return getStandardScore(rollIndex) == 10
+    }
+
+    private fun getSpareScore(rollIndex: Int): Int {
+        return rolls[rollIndex] + rolls[rollIndex + 1] + rolls[rollIndex + 2]
     }
 }
