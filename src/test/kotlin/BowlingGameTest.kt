@@ -1,8 +1,19 @@
-import org.junit.jupiter.api.Assertions.*
+import org.junit.Before
+import org.junit.Test
+import org.junit.jupiter.api.Assertions
 
 internal class BowlingGameTest {
 
-    @org.junit.jupiter.api.BeforeEach
+    lateinit var game: BowlingGame
+
+    @Before
     fun setUp() {
+        game = BowlingGame()
+    }
+
+    //Test1: Write test to check that an empty/default game returns zero score
+    @Test
+    fun testEmptyGame() {
+        Assertions.assertEquals(0, game.score)
     }
 }
