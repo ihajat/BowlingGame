@@ -48,4 +48,12 @@ internal class BowlingGameTest {
         game.setRolls(rolls)
         assertEquals(14, game.score)
     }
+
+    //Test6: Write test to check a perfect game returns 300
+    @Test
+    fun testPerfectGame() {
+        val rolls = intArrayOf(10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10)
+        game.setRolls(rolls)
+        assertEquals(300, game.score)
+    }
 }
