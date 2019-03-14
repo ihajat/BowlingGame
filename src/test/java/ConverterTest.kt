@@ -13,10 +13,19 @@ class ConverterTest {
         converter = Converter()
     }
 
+    //Test 1:  test to convert standard scoring strings to array used for the Bowling Game
     @Test
     fun testStandard() {
         val rolls = converter.convert("51 51 51 51 51 51 51 51 51 51")
         val rolls2 = arrayOf(5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1)
+        assertEquals(rolls, Arrays.asList(*rolls2))
+    }
+
+    //Test 2:  test to convert standard scoring strings to array used for the Bowling Game
+    @Test
+    fun testStandardScoringWorksWithDashesForZeroScore() {
+        val rolls = converter.convert("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-")
+        val rolls2 = arrayOf(9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0)
         assertEquals(rolls, Arrays.asList(*rolls2))
     }
 }
