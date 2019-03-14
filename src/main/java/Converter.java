@@ -10,6 +10,7 @@ public class Converter {
             String[] balls = frame.split("");
             for (String ball : balls) {
                 if (ball.matches("-")) rolls.add(0);
+                else if (ball.matches("/")) rolls.add(10 - rolls.get(rolls.size() - 1));
                 else rolls.add(Integer.valueOf(ball));
             }
         }
