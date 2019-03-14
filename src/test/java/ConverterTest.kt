@@ -36,4 +36,12 @@ class ConverterTest {
         val rolls2 = arrayOf(5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5)
         assertEquals(rolls, Arrays.asList(*rolls2))
     }
+
+    //Test 4: test to convert scoring strings with X used to signify a strike score
+    @Test
+    fun test1() {
+        val rolls = converter.convert("X X X X X X X X X X X X")
+        val rolls2 = arrayOf(10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10)
+        assertEquals(rolls, Arrays.asList(*rolls2))
+    }
 }
